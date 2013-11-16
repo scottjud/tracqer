@@ -33,7 +33,7 @@ gem 'bson_ext'
 
 gem 'mongo_mapper', :git => "git://github.com/mongomapper/mongomapper.git", :tag => "v0.13.0.beta2"
 
-
+#gem "audited-mongo_mapper", "~> 3.0"
 
 group :doc do
   # bundle exec rake doc:rails generates the API under doc/api.
