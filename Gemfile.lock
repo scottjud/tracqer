@@ -38,8 +38,11 @@ GEM
       tzinfo (~> 0.3.37)
     arel (4.0.1)
     atomic (1.1.14)
-    bootstrap-sass (2.3.2.0)
-      sass (~> 3.2)
+    bootstrap-sass-extras (0.0.5)
+      rails (>= 3.1.0)
+    bootstrap-sass-rails (3.0.3.0)
+      railties (>= 3.1.0)
+      sass-rails (>= 3.1.0)
     bson (1.9.2)
     bson_ext (1.9.2)
       bson (~> 1.9.2)
@@ -127,7 +130,8 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-  bootstrap-sass (= 2.3.2.0)
+  bootstrap-sass-extras
+  bootstrap-sass-rails
   bson_ext
   coffee-rails (~> 4.0.0)
   jbuilder (~> 1.2)

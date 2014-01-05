@@ -21,6 +21,13 @@
     <%= f.collection_select(:request_type_id, RequestType.all, :id, :name) %>
   </div>
 
+<% if @admin %>
+ <div class="field">
+    <%= f.label :request_status %><br>
+    <%= f.collection_select(:request_status_id, RequestStatus.all, :id, :name) %>
+  </div>
+<% end %>
+
   <div class="field">
     <%= f.label :title %><br>
     <%= f.text_field :title %>

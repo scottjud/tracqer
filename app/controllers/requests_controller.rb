@@ -19,6 +19,8 @@ class RequestsController < ApplicationController
 
   # GET /requests/1/edit
   def edit
+    @admin = params[:admin]=='true'
+
   end
 
   # POST /requests
@@ -69,6 +71,6 @@ class RequestsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def request_params
-      params.require(:request).permit(:title, :name, :date, :description, :urls, :request_type_id)
+      params.require(:request).permit(:title, :name, :date, :description, :urls, :request_type_id, :request_status_id)
     end
 end
