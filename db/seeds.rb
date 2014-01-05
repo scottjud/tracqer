@@ -5,3 +5,10 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
+
+RequestStatus.first_or_create( :name => 'Not Started')
+RequestStatus.first_or_create( :name => 'In Progress')
+RequestStatus.first_or_create( :name => 'Completed')
+
+RequestType.first_or_create( :name => 'Campaign Build')
+RequestType.first_or_create( :name => 'Add a Channel')

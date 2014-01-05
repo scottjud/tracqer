@@ -6,6 +6,8 @@
       <th>Name</th>
       <th>Title</th>
       <th>Date</th>
+      <th>Request Type</th>
+      <th>Request Status</th>
       <th></th>
       <th></th>
       <th></th>
@@ -18,6 +20,8 @@
         <td><%= request.name %></td>
         <td><%= request.title %></td>
         <td><%= request.date %></td>
+        <td><%= request.request_type.name %></td>
+        <td><%= request.request_status.name %></td>
         <td><%= link_to 'Show', request %></td>
         <td><%= link_to 'Edit', edit_request_path(request) %></td>
         <td><%= link_to 'Destroy', request, method: :delete, data: { confirm: 'Are you sure?' } %></td>

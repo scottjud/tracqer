@@ -17,6 +17,11 @@
   </div>
 
   <div class="field">
+    <%= f.label :request_type %><br>
+    <%= f.collection_select(:request_type_id, RequestType.all, :id, :name) %>
+  </div>
+
+  <div class="field">
     <%= f.label :title %><br>
     <%= f.text_field :title %>
   </div>

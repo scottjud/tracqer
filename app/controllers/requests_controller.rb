@@ -41,7 +41,7 @@ class RequestsController < ApplicationController
   # PATCH/PUT /requests/1.json
   def update
     respond_to do |format|
-      if @request.update(request_params)
+      if @request.update_attributes!(request_params)
         format.html { redirect_to @request, notice: 'Request was successfully updated.' }
         format.json { head :no_content }
       else
@@ -69,6 +69,6 @@ class RequestsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def request_params
-      params.require(:request).permit(:title, :name, :date, :description, :urls)
+      params.require(:request).permit(:title, :name, :date, :description, :urls, :request_type_id)
     end
 end
