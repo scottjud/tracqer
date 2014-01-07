@@ -1,5 +1,17 @@
 class Request
   include MongoMapper::Document
+  plugin MongoMapper::Plugins::Commentable
+
+  def on_add_comment(comment)
+    @post = Post.create
+    @commentor = User.create
+
+      @post.add_comment!("great post..", @user)
+
+      @post.comments_count # => 1
+      @posts.comments # => [<Comment>]
+  end
+
 
   belongs_to :request_type
   belongs_to :request_status
