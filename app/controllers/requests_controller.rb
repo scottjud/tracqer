@@ -12,6 +12,12 @@ class RequestsController < ApplicationController
   def show
   end
 
+  def add_comment
+    @request = Request.find_by_id(params[:id])
+    @request.comments.create(:text => params[:comment])
+    redirect_to request_path(@request), status: :found
+  end
+
   # GET /requests/new
   def new
     @request = Request.new

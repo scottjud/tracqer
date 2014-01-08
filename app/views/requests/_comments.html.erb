@@ -1,0 +1,22 @@
+<p>
+  <strong>Comment Count:</strong>
+  <%= @request.comments.count %>
+</p>
+
+
+
+
+<%= form_tag({:controller=>"requests", :action=>"add_comment"}, method: :post) do %>
+  <%= text_field_tag 'comment', 'Enter your search comments here' %>
+  <%= button_to 'Submit Comment', add_comment_request_path %>
+<% end %>
+
+
+
+<% @request.comments.each do |comment| %>
+
+  <p>
+    <%= comment.text %>
+  </p>
+
+<% end %>

@@ -1,6 +1,5 @@
 class Comment
-  include MongoMapper::EmbeddedDocument
-  key :body, String
-
-  belongs_to :request
+  include MongoMapper::Document
+  key :text, String
+  belongs_to :commentable, :polymorphic => true
 end

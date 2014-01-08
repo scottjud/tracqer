@@ -1,4 +1,4 @@
-class Request
+class Request < Commentable
   include MongoMapper::Document
 
   belongs_to :request_type

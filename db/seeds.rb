@@ -12,3 +12,4 @@ RequestStatus.first_or_create( :name => 'Completed')
 
 RequestType.first_or_create( :name => 'Campaign Build')
 RequestType.first_or_create( :name => 'Add a Channel')
+RequestType.first_or_create( :name => 'Custom SOC')
